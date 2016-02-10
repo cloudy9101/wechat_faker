@@ -33,8 +33,6 @@
 }
 
 #wechat #content .message-wrap {
-  position: absolute;
-  bottom: 5px;
   width: 100%;
 }
 
