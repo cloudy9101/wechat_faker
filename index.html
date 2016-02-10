@@ -1,0 +1,69 @@
+<head>
+  <title>hello world</title>
+  <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.min.js"></script>
+  <script src="./html2canvas.js"></script>
+  <link href="./index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="app">
+    <div id="wechat">
+      <section id="mobile-header"></section>
+      <section id="header">
+        <div class="center">
+          {{title}}
+        </div>
+      </section>
+      <section id="content">
+        <div class="message-wrap">
+          <div v-for="message in messages">
+            <div class="{{message.type === 'send' ? 'send' : 'receive'}}">
+              <div class="avatar">
+                <img v-bind:src="message.type === 'send' ? sendAvatar : receiveAvatar" />
+              </div>
+              <div class="content">
+                <div class="{{message.type == 'send' ? 'arrow' : 'left_arrow'}}"></div>
+                {{message.content}}
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+      <section id="footer"></section>
+      <div class="clear"></div>
+    </div>
+    <div id="settings">
+      <div>
+        <label>朋友昵称：</label>
+        <input type="text" v-model="title" />
+      </div>
+      <div>
+        <label>朋友头像：</label>
+        <input type="file" v-on:change="setReceiveAvatar" />
+      </div>
+      <div>
+        <label>我的头像：</label>
+        <input type="file" v-on:change="setSendAvatar" />
+      </div>
+      <div>
+        <label>朋友说：</label>
+        <input type="text" v-model="receive" />
+        <button v-on:click="addReceive">添加</button>
+      </div>
+      <div>
+        <label>我说：</label>
+        <input type="text" v-model="send" />
+        <button v-on:click="addSend">添加</button>
+      </div>
+      <div>
+        <button v-on:click="reset">重置</button>
+        <button v-on:click="capture">保存</button>
+        <label>（结果在下面）</label>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="results"></div>
+  </div>
+  <script src="./index.js"></script>
+</body>

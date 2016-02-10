@@ -1,0 +1,112 @@
+.clear {
+  clear: both;
+}
+
+#wechat {
+  width: 750px;
+  height: 1280px;
+  float: left;
+}
+
+#wechat #mobile-header {
+  height: 40px;
+  background-image: url(./mobile_header.jpg);
+}
+
+#wechat #header {
+  height: 83px;
+  background-image: url(./header.jpg);
+}
+
+#wechat #header .center {
+  line-height: 83px;
+  text-align: center;
+  font-size: 2.2em;
+  color: white;
+}
+
+#wechat #content {
+  height: 1057px;
+  overflow-y: scroll;
+  position: relative;
+  background-color: #ebebeb;
+}
+
+#wechat #content .message-wrap {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+
+#wechat #content .message-wrap .avatar {
+  margin: 22px 22px 22px 22px;
+  border: 1px solid #d9d9d9;
+}
+
+#wechat #content .message-wrap .content {
+  margin: 22px 0 22px 0;
+  max-width: 437px;
+  font-size: 2.2em;
+  border-radius: 8px;
+}
+
+#wechat #content .message-wrap .avatar img {
+  width: 80px;
+  height: 80px;
+}
+
+#wechat #content .message-wrap .send {
+  position: relative;
+}
+
+#wechat #content .message-wrap .send .avatar {
+  float: right;
+}
+
+#wechat #content .message-wrap .send .content {
+  float: right;
+  padding: 29px 22px 29px 22px;
+  border: 1px solid #83d45a;
+  background-color: #a0e75a;
+}
+
+#wechat #content .message-wrap .send .content .arrow {
+  width: 15px;
+  height: 25px;
+  background-image: url(./arrow.png);
+  float: right;
+  margin-right: -37px;
+}
+
+#wechat #content .message-wrap .receive {
+  position: relative;
+}
+
+#wechat #content .message-wrap .receive .avatar {
+  float: left;
+}
+
+#wechat #content .message-wrap .receive .content {
+  float: left;
+  padding: 29px 22px 29px 22px;
+  border: 1px solid #d0d0d0;
+  background-color: #ffffff;
+}
+
+#wechat #content .message-wrap .receive .content .left_arrow {
+  width: 15px;
+  height: 25px;
+  background-image: url(./left_arrow.png);
+  float: left;
+  margin-left: -37px;
+}
+
+#wechat #footer {
+  height: 100px;
+  background-image: url(./footer.png);
+}
+
+#settings {
+  float: left;
+  margin-left: 20px;
+}
